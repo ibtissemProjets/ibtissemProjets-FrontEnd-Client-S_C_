@@ -9,12 +9,15 @@ import { InscriCliService } from '../services/inscri-cli.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
+  Username
+  connected
   /////////////////////////
   constructor() {
-
+    this.Username = localStorage.getItem("Username")
+    this.connected = localStorage.getItem("connected")
    }
   ngOnInit() {
+
   }
 
 }

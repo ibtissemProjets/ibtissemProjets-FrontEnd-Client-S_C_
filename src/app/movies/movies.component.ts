@@ -26,7 +26,7 @@ export class MoviesComponent implements OnInit {
 
   public genres = Genre;
   selectedGenre = 'all';
-
+ 
   constructor(
     private moviesRepositoryService: MoviesRepositoryService,
     private filterMoviesService: FilterMoviesService,
@@ -40,6 +40,12 @@ export class MoviesComponent implements OnInit {
     }
 
   ngOnInit() {
+    if (!localStorage.getItem('foo')) { 
+      localStorage.setItem('foo', 'no reload') 
+      location.reload() 
+    } else {
+      localStorage.removeItem('foo') 
+    }
     this.moviesRepositoryService.getMovies()
     .subscribe(movies => {
       this.movies = movies;

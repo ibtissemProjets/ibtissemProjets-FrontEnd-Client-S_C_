@@ -115,8 +115,8 @@
 
 					
 
-					
-						<li class="uk-navbar-item">
+				 
+						<li class="uk-navbar-item" *ngIf="!connected">
 							<div>
 								<a routerLink="/register" class="uk-button uk-button-primary uk-button-small" style="white-space: nowrap;">
 									S'inscrire
@@ -135,14 +135,26 @@
 							</a>
 						</li> -->
 						
-						<li class="uk-navbar-item">
+						<li class="uk-navbar-item" *ngIf="!connected">
 							<a routerLink="/login" class="uk-button uk-padding-remove" style="text-transform: initial !important;white-space: nowrap;">
 								Se connecter
 							</a>
 						</li>
 					
+				
+				 
+						<li class="uk-navbar-item"  *ngIf="connected">
+							<div>
+								<a  class="uk-button uk-button-primary uk-button-small" style="white-space: nowrap;">
+                         {{Username}}								</a>
+							</div>
+						</li>
+					
 
 					
+				 
+					
+				 
 					
 				</ul>
 				

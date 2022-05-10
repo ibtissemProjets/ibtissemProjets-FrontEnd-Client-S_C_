@@ -17,6 +17,8 @@ import { MoviesSliderComponent } from '../movies-slider/movies-slider.component'
  import { DatabaseService } from './services/database.service';
 import { ModalModule  } from 'ngx-bootstrap/modal';
 import { IvyCarouselModule } from "angular-responsive-carousel";
+import { InscriCliService } from '../services/inscri-cli.service';
+import { LoginCliService } from '../services/login-cli.service';
 @NgModule({
   imports: [
     ModalModule.forRoot(),
@@ -49,7 +51,9 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
     MoviesRepositoryService,
     FilterMoviesService,
     DatabaseService,
-    ModalModule 
+    ModalModule ,
+    InscriCliService,
+    
   ]
 })
 export class MoviesModule { }

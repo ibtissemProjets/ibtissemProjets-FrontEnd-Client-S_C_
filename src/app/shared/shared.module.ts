@@ -9,7 +9,8 @@ import { LoadingSpinnerComponent } from './loading-spinner.component';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryMoviesDataService),
+    // HttpClientInMemoryWebApiModule.forRoot(InMemoryMoviesDataService),
+    
     BrowserAnimationsModule
   ],
   declarations: [

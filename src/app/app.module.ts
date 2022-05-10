@@ -18,6 +18,8 @@ import { InscriClientComponent } from './inscri-client/inscri-client.component';
 import { LoginCliComponent } from './login-cli/login-cli.component';
 import { LoginModule } from './login-cli/login-cli.module';
 import { RegisterModule } from './inscri-client/inscri-client.module';
+import { InscriCliService } from './services/inscri-cli.service';
+import { LoginCliService } from './services/login-cli.service';
 @NgModule({
   imports: [
     BrowserModule,

@@ -7,13 +7,18 @@ import { environment } from 'src/environments/environment';
 })
 export class InscriCliService {
 
-  
-
-
   url = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
   create(data): Observable<any> {
-    return this.http.post(this.url+"/users/register", data);
+   
+    return this.http.post("http://localhost:3000/users/register", data);
+  }
+
+  getUser(): Observable<any> {
+    return this.http.get(this.url + "/admin/getUsers");
   }
 }
+
+
+

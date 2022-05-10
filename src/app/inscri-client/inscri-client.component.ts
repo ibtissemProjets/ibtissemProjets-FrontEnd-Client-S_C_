@@ -21,6 +21,7 @@ export class InscriClientComponent implements OnInit {
   error_messages = {
     firstname: [{ type: 'required', message: 'Prénom obligatoire.' }],
 
+    
     lastname: [{ type: '', message: 'Nom obligatoire.' }],
     pays:[{ type: '', message: 'Pays obligatoire.' }],
     ville:[{ type: '', message: 'Ville obligatoire.' }],
@@ -58,7 +59,7 @@ export class InscriClientComponent implements OnInit {
       ville: [null, Validators.required,],
       dateNaiss: [null, Validators.required],
 
-
+      RoleId: [2],
 
 
 
@@ -82,26 +83,35 @@ export class InscriClientComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.inscriservice.getUser().subscribe(
+      (data) => {
+   console.log("get",data)
+      })
   }
   get f() { return this.registerCliForm.controls }
+
   onSubmitClient() {
     this.isLoading = true;
-    
-    console.log("test")
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerCliForm.invalid) {
       return;
     }
+    
+    this.users = this.registerCliForm.value
+    console.log("test",this.users)
     this.inscriservice.create(this.users).subscribe(
-     ()=>{
+     (data)=>{
       this.isLoading = false;
-     
-         this.router.navigateByUrl('/login')
+ 
+      this.router.navigateByUrl('/login')
 
      },
      err => {
+      console.log(err)
          console.error(err)
+        
      }
  )
 }
