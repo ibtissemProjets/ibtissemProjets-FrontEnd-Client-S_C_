@@ -1,0 +1,153 @@
+<header class="uk-container uk-container-large uk-light uk-padding-remove navbar-absolute">
+	<div id="modal-search-full" class="uk-modal-full uk-modal uk-light" uk-modal="">
+	<div class="uk-modal-dialog uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-background-secondary" uk-height-viewport="">
+			<button class="uk-modal-close-full uk-background-secondary uk-close-large uk-icon uk-close" type="button" uk-close=""><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#000" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line><line fill="none" stroke="#000" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line></svg></button>
+			<form class="uk-search uk-search-large">
+				<input id="search_input" class="uk-search-input uk-text-center uk-visible@s" type="search" placeholder="Film, Acteur, Réalisateur..." autofocus="" autocomplete="off">
+				<input id="search_input2" class="uk-search-input uk-text-center uk-hidden@s" type="search" placeholder="Film, Acteur..." autofocus="" autocomplete="off">
+			</form>
+			<div style="min-height: 60px;">
+				<ul id="search_placeholder" class="uk-nav uk-dropdown-nav uk-width-auto">
+					<li><h5 class="uk-margin-remove">Tapez votre texte ...</h5></li>
+				</ul>
+				<ul id="search_loading" class="uk-nav uk-dropdown-nav uk-width-auto" style="display: none;">
+					<li><h5 class="uk-margin-remove">Chargement<div class="uk-margin-small-left uk-text-small uk-icon uk-spinner" uk-spinner=""><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14"></circle></svg></div></h5></li>
+				</ul>
+				<ul id="search_notfound" class="uk-nav uk-dropdown-nav uk-width-auto" style="display: none;">
+					<li><h5 class="uk-margin-remove">Pas de résultats</h5></li>
+				</ul>
+				<ul id="search_result" class="uk-nav uk-dropdown-nav uk-width-auto" style="display: none;">
+				</ul>
+			</div>
+	</div>
+</div>
+	
+	
+
+	
+
+
+	<div dir="ltr">
+		<nav class="uk-navbar uk-navbar-container Artify-navBar">	
+			<div class="uk-navbar-left">
+				
+				<!-- LOGO -->
+				<a class="uk-navbar-item uk-logo uk-margin-small-left uk-margin-right uk-visible@s" href="/">					
+					<img src="assets/images/logo4.png" alt="Soirecinema Logo" height="60" width="60" loading="lazy">									
+				</a>
+
+
+				<!-- LINKS -->
+				<a id="navbar-home-link" href="/" class="uk-navbar-toggle uk-visible@s">
+					<button class="uk-button uk-button-text uk-text-capitalize uk-text-meta">
+						Accueil
+					</button>
+				</a>
+				<a id="navbar-films-link" routerLink="/" class="uk-navbar-toggle uk-visible@l">
+					<button class="uk-button uk-button-text uk-text-capitalize uk-text-meta">
+						Films
+					</button>
+				</a>
+				<a id="navbar-series-link" routerLink="/contact" class="uk-navbar-toggle uk-visible@l">
+					<button class="uk-button uk-button-text uk-text-capitalize uk-text-meta">
+						Contactez-nous
+					</button>
+				</a>
+			 
+
+				
+			</div>
+
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav">
+					<a class="uk-navbar-toggle uk-button uk-padding-remove uk-margin-small-right" href="#modal-search-full" uk-toggle="" aria-expanded="false">
+						<span class="uk-icon" uk-icon="icon: search"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path></svg></span>
+						<!-- <span class="uk-text-meta uk-text-capitalize uk-visible@s">
+							&nbsp;Rechercher
+						</span> -->
+					</a>
+					 
+						<li class="uk-navbar-item uk-padding-remove uk-visible@s uk-margin-small-right">
+							<a class="uk-icon uk-padding-remove" uk-icon="icon: world" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" d="M1,10.5 L19,10.5"></path><path fill="none" stroke="#000" d="M2.35,15.5 L17.65,15.5"></path><path fill="none" stroke="#000" d="M2.35,5.5 L17.523,5.5"></path><path fill="none" stroke="#000" d="M10,19.46 L9.98,19.46 C7.31,17.33 5.61,14.141 5.61,10.58 C5.61,7.02 7.33,3.83 10,1.7 C10.01,1.7 9.99,1.7 10,1.7 L10,1.7 C12.67,3.83 14.4,7.02 14.4,10.58 C14.4,14.141 12.67,17.33 10,19.46 L10,19.46 L10,19.46 L10,19.46 Z"></path><circle fill="none" stroke="#000" cx="10" cy="10.5" r="9"></circle></svg></a>
+							<div uk-dropdown="mode: click" class="uk-dropdown uk-light uk-background-secondary">
+								<ul class="uk-nav uk-dropdown-nav">
+									
+										 
+									
+										 
+											<li>
+												<a href="https://artify.tn/fr/" class="uk-text-primary">
+													Français
+												</a>
+											</li>
+										 
+									
+										 
+											<li>
+												<a href="https://artify.tn/ar/" class="">
+													العربية
+												</a>
+											</li>
+										 
+									
+										 
+											<li>
+												<a href="https://artify.tn/en/" class="">
+													English
+												</a>
+											</li>
+										 
+									
+								</ul>
+							</div>
+						</li>
+					 
+
+					<!-- <li>
+						<a uk-icon="bell"><span class="uk-badge Artify-notification"></span></a>
+						<div uk-dropdown="mode: click" class="uk-light uk-background-secondary">
+							<ul class="uk-nav uk-dropdown-nav">
+							</ul>
+						</div>
+					</li> -->
+					
+			
+
+					
+
+					
+						<li class="uk-navbar-item">
+							<div>
+								<a routerLink="/register" class="uk-button uk-button-primary uk-button-small" style="white-space: nowrap;">
+									S'inscrire
+								</a>
+							</div>
+						</li>
+					
+
+					
+				
+					
+					
+						<!-- <li class="uk-navbar-item">
+							<a class="uk-button uk-padding-remove uk-hidden@s" href="/login">
+								<span uk-icon="icon: sign-in"></span>
+							</a>
+						</li> -->
+						
+						<li class="uk-navbar-item">
+							<a routerLink="/login" class="uk-button uk-padding-remove" style="text-transform: initial !important;white-space: nowrap;">
+								Se connecter
+							</a>
+						</li>
+					
+
+					
+					
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+
+</header>

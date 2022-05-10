@@ -1,0 +1,224 @@
+
+<app-loading-spinner [loading]="!movie"></app-loading-spinner>
+
+<div class="movie-info-container" *ngIf="movie" [@simpleFadeAnimation]="'in'">
+  <div class="movie-banner-cover">
+    <img src="assets/movies/{{movie.cover}}" alt="movie cover">
+  </div>
+  <div class="movie-detail-container">
+    <div class="movie-cover">
+      <img src="assets/movies/{{movie.img}}" alt="movie poster">
+ 
+    </div>
+    <div class="movie-detail">
+      <h2>{{movie.name}}</h2>
+      <div class="short-info">
+        <div class="rate"><span>rate: <strong>{{movie.rate}}</strong></span></div>
+        <div class="duration"><span>length: <strong>{{movie.length}}</strong></span></div>
+        <div class="genres">
+          <span>genres:</span>
+          <a *ngFor="let genre of movie.genres" [routerLink]="['/movies/']" [queryParams]="{filter:genre}">
+            {{genre}}
+          </a>
+        </div>
+      </div>
+      <p class="desc">
+        {{movie.description}}
+      </p>
+      <div class="uk-margin-small-bottom ">
+      
+        <!-- TRAILER BTN -->	
+        <button  (click)="openModal(preview)" class="uk-button uk-button-primary uk-display-inline Artify-outline 
+          " uk-toggle="target: #modal-trailer" dir="ltr" aria-expanded="false">
+          <span>Bande annonce</span>
+          <span uk-icon="icon: video-camera;" class="uk-margin-small-left uk-icon"><svg width="20" height="20" viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" 
+             points="17.5 6.9 17.5 13.1 13.5 10.4 13.5 14.5 2.5 14.5 2.5 5.5 13.5 5.5 13.5 9.6 17.5 6.9"></polygon></svg></span>
+        </button>
+        
+        <!-- WATCH BTN -->
+        <button class="uk-button uk-display-inline uk-button-primary uk-margin-small-right uk-border-rounded " dir="ltr">Regarder 3 TND<span uk-icon="icon: play; ratio: 1.3" class="uk-margin-small-left white-star-icon uk-icon"><svg width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" points="6.5,5 14.5,10 6.5,15"></polygon></svg></span></button>
+
+         
+      </div>
+      <div class="uk-grid uk-margin-large-top">
+				
+				<div class="uk-width-2-3@m">
+					<div class="uk-grid uk-width-1-1 uk-grid-small">
+						<div class="uk-width-1-1 uk-flex uk-flex-bottom uk-flex-between uk-margin-small-bottom">
+							<h3 class="uk-margin-remove uk-display-inline">Casting</h3>
+							<a href="#modal-staff" uk-toggle="" class="uk-toggle uk-position-relative" style="top: 5px;left: 5px;" aria-expanded="false">
+								Voir plus
+								<span uk-icon="icon: arrow-right; ratio: 1.5" style="color: orange" class="uk-icon"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" points="10 5 15 9.5 10 14"></polyline><line fill="none" stroke="#000" x1="4" y1="9.5" x2="15" y2="9.5"></line></svg></span>
+							</a>
+						</div>
+						
+						<div class="uk-overflow-hidden uk-width-1-3 uk-width-1-4@s uk-width-1-5@l uk-width-1-6@xl   " style="display: inline-block;">
+							<div class="uk-position-relative uk-transition-toggle">
+	<img src="https://pictures.artify.tn/media/jlxkszfxlysxe86cv6nj.jpg?aspect_ratio=2%3A3&amp;width=200" alt="Mohamed Ali Ben Jemaa" style="object-fit: cover;" width="100%" height="auto" loading="lazy" class="uk-display-block">
+
+	<a href="/professional/5bc0846bae31175de9084b1f" class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(0,0,0,.6);">
+		<span class="uk-position-center uk-icon" uk-icon="icon: user; ratio: 1.5" style="opacity: 0.4"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+	</a>
+
+	<div class="uk-position-bottom uk-text-center" style="background: rgba(0,0,0,.6);background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);">
+		<a href="/professional/5bc0846bae31175de9084b1f">
+			<p class="uk-text-small uk-margin-small-left uk-margin-small-right uk-margin-small-bottom uk-padding-remove-left uk-padding-remove-right" style="cursor: pointer;text-shadow: 0 1px 3px black;">Mohamed Ali Ben Jemaa</p>
+		</a>
+	</div>
+</div>
+
+
+						</div>
+						
+						<div class="uk-overflow-hidden uk-width-1-3 uk-width-1-4@s uk-width-1-5@l uk-width-1-6@xl   " style="display: inline-block;">
+							<div class="uk-position-relative uk-transition-toggle">
+	<img src="https://pictures.artify.tn/media/vgpbnu3utxnhh05ssc0g.jpg?aspect_ratio=2%3A3&amp;width=200" alt="Fatma Ben Saïdane" style="object-fit: cover;" width="100%" height="auto" loading="lazy" class="uk-display-block">
+
+	<a href="/professional/5bd322771cdda267505b56b3" class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(0,0,0,.6);">
+		<span class="uk-position-center uk-icon" uk-icon="icon: user; ratio: 1.5" style="opacity: 0.4"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+	</a>
+
+	<div class="uk-position-bottom uk-text-center" style="background: rgba(0,0,0,.6);background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);">
+		<a href="/professional/5bd322771cdda267505b56b3">
+			<p class="uk-text-small uk-margin-small-left uk-margin-small-right uk-margin-small-bottom uk-padding-remove-left uk-padding-remove-right" style="cursor: pointer;text-shadow: 0 1px 3px black;">Fatma Ben Saïdane</p>
+		</a>
+	</div>
+</div>
+
+
+						</div>
+						
+						<div class="uk-overflow-hidden uk-width-1-3 uk-width-1-4@s uk-width-1-5@l uk-width-1-6@xl   " style="display: inline-block;">
+							<div class="uk-position-relative uk-transition-toggle">
+	<img src="https://pictures.artify.tn/media/gxad9l7ggwytybhaixix.png?aspect_ratio=2%3A3&amp;width=200" alt="Wajiha Jendoubi" style="object-fit: cover;" width="100%" height="auto" loading="lazy" class="uk-display-block">
+
+	<a href="/professional/5bc9fe1efd72df5bfbce7363" class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(0,0,0,.6);">
+		<span class="uk-position-center uk-icon" uk-icon="icon: user; ratio: 1.5" style="opacity: 0.4"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+	</a>
+
+	<div class="uk-position-bottom uk-text-center" style="background: rgba(0,0,0,.6);background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);">
+		<a href="/professional/5bc9fe1efd72df5bfbce7363">
+			<p class="uk-text-small uk-margin-small-left uk-margin-small-right uk-margin-small-bottom uk-padding-remove-left uk-padding-remove-right" style="cursor: pointer;text-shadow: 0 1px 3px black;">Wajiha Jendoubi</p>
+		</a>
+	</div>
+</div>
+
+
+						</div>
+						
+						<div class="uk-overflow-hidden uk-width-1-3 uk-width-1-4@s uk-width-1-5@l uk-width-1-6@xl  uk-visible@s   " style="display: inline-block;">
+							<div class="uk-position-relative uk-transition-toggle">
+	<img src="https://pictures.artify.tn/media/ifgqccobq6mwvgg1r0al.jpg?aspect_ratio=2%3A3&amp;width=200" alt="Mohamed Driss" style="object-fit: cover;" width="100%" height="auto" loading="lazy" class="uk-display-block">
+
+	<a href="/professional/5d35b4bb67f2cf03a9e3d4b1" class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(0,0,0,.6);">
+		<span class="uk-position-center uk-icon" uk-icon="icon: user; ratio: 1.5" style="opacity: 0.4"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+	</a>
+
+	<div class="uk-position-bottom uk-text-center" style="background: rgba(0,0,0,.6);background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);">
+		<a href="/professional/5d35b4bb67f2cf03a9e3d4b1">
+			<p class="uk-text-small uk-margin-small-left uk-margin-small-right uk-margin-small-bottom uk-padding-remove-left uk-padding-remove-right" style="cursor: pointer;text-shadow: 0 1px 3px black;">Mohamed Driss</p>
+		</a>
+	</div>
+</div>
+
+
+						</div>
+						
+						<div class="uk-overflow-hidden uk-width-1-3 uk-width-1-4@s uk-width-1-5@l uk-width-1-6@xl  uk-visible@s   uk-visible@l  " style="display: inline-block;">
+							<div class="uk-position-relative uk-transition-toggle">
+	<img src="https://pictures.artify.tn/media/ngqkrqb1vmyvvgctzihd.jpg?aspect_ratio=2%3A3&amp;width=200" alt="Latifa El Gafsi" style="object-fit: cover;" width="100%" height="auto" loading="lazy" class="uk-display-block">
+
+	<a href="/professional/5bbf791bae31175de9084b16" class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(0,0,0,.6);">
+		<span class="uk-position-center uk-icon" uk-icon="icon: user; ratio: 1.5" style="opacity: 0.4"><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
+	</a>
+
+	<div class="uk-position-bottom uk-text-center" style="background: rgba(0,0,0,.6);background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);">
+		<a href="/professional/5bbf791bae31175de9084b16">
+			<p class="uk-text-small uk-margin-small-left uk-margin-small-right uk-margin-small-bottom uk-padding-remove-left uk-padding-remove-right" style="cursor: pointer;text-shadow: 0 1px 3px black;">Latifa El Gafsi</p>
+		</a>
+	</div>
+</div>
+
+
+						</div>
+						
+					</div>
+				</div>
+				
+				<!-- Gallery -->
+				
+	<div class="uk-width-1-1  uk-width-1-3@m  uk-margin-medium-bottom">
+		<div class="uk-wwidth-1-1 uk-margin-small-bottom">
+			<h3 class="uk-margin-remove">Galerie</h3> 
+		</div>
+	
+		<div class="uk-grid uk-grid-small" uk-lightbox="animation: slide">	 
+				
+				<a class="uk-card uk-width-1-3  uk-width-1-1@m  uk-display-block uk-margin-small-bottom" href="https://pictures.artify.tn/media/vo9z9y8ln1ixlqfknr3u.jpg?" data-caption="Galerie &quot;Porto Farina&quot;" style="padding-left:10px;">
+					<div class="uk-height-small uk-border-rounded uk-position-relative uk-overflow-hidden border imageBackgroundPlaceHolder">
+						<img src="https://pictures.artify.tn/media/vo9z9y8ln1ixlqfknr3u.jpg?width=300" width="100%" alt="Galerie 1 - Porto Farina" class="uk-cover" style="object-fit: cover;" loading="lazy">									
+					</div>
+				</a>
+
+				<a class="uk-card uk-width-1-3  uk-width-1-2@m  uk-display-block" href="https://pictures.artify.tn/media/rpjcqqybqxsgtlfxnom8.jpg?" data-caption="Galerie &quot;Porto Farina&quot;" style="padding-left:10px;">
+					<div class="uk-height-small uk-border-rounded uk-position-relative uk-overflow-hidden border imageBackgroundPlaceHolder">
+						<img src="https://pictures.artify.tn/media/rpjcqqybqxsgtlfxnom8.jpg?width=300" alt="Galerie 2 - Porto Farina" class="uk-cover" style="object-fit: cover;" loading="lazy">					
+					</div>
+				</a>
+
+				<a class="uk-card uk-width-1-3  uk-width-1-2@m  uk-display-block" href="https://pictures.artify.tn/media/sy9lcajt721oj7k4qy3x.jpg?" data-caption="Galerie &quot;Porto Farina&quot;" style="padding-left:10px;">
+					<div class="uk-height-small uk-border-rounded uk-position-relative uk-overflow-hidden border imageBackgroundPlaceHolder">
+						<img src="https://pictures.artify.tn/media/sy9lcajt721oj7k4qy3x.jpg?width=300" alt="Galerie 3 - Porto Farina" class="uk-cover" style="object-fit: cover;" loading="lazy">	
+														         
+							<div class="uk-overlay uk-light uk-background-secondary uk-position-cover uk-border-rounded" style="background-color: #02132175 !important">
+								<h2 class="uk-position-center">+2</h2>
+							</div>
+															
+					</div>
+				</a>
+					
+
+				<div hidden="">
+					
+														
+						<a class="uk-inline" href="https://pictures.artify.tn/media/ntwh98aehrnakscp7min.jpg?" data-caption="Galerie &quot;Porto Farina&quot;">
+							<div class="uk-height-small uk-background-cover uk-border-rounded uk-position-relative border imageBackgroundPlaceHolder" data-src="https://pictures.artify.tn/media/ntwh98aehrnakscp7min.jpg?" uk-img=""> 									
+							</div>
+						</a>
+														
+						<a class="uk-inline" href="https://pictures.artify.tn/media/odgkpycqgsedldawe6nq.jpg?" data-caption="Galerie &quot;Porto Farina&quot;">
+							<div class="uk-height-small uk-background-cover uk-border-rounded uk-position-relative border imageBackgroundPlaceHolder" data-src="https://pictures.artify.tn/media/odgkpycqgsedldawe6nq.jpg?" uk-img=""> 									
+							</div>
+						</a>
+					
+				</div>
+			
+		</div>
+	</div>
+
+			</div>
+      <div class="uk-width-expand uk-margin-top reviewsSection">
+				<h3>Commentaires</h3>
+				<div id="ReviewsContainer" class="uk-position-relative uk-width-expand" style="min-height: 200px"><div class="uk-grid uk-height-match uk-light"><div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-center"><div class="uk-flex uk-flex-center uk-margin-medium-top uk-height-1-1 uk-margin-bottom"><div class="uk-width-auto uk-margin-small-left uk-margin-small-right"><h2 class="uk-heading-small uk-text-center" style="line-height: 2rem; color: white;">6.7<span style="font-size: 0.3em;">/10</span><p class="uk-margin-remove"><span uk-icon="icon: star; ratio: .8" class="white-star-icon uk-icon" style="color: white; padding: 0px 3px;"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" stroke-width="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span><span uk-icon="icon: star; ratio: .8" class="white-star-icon uk-icon" style="color: white; padding: 0px 3px;"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" stroke-width="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span><span uk-icon="icon: star; ratio: .8" class="white-star-icon uk-icon" style="color: white; padding: 0px 3px;"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" stroke-width="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span><span uk-icon="icon: star; ratio: .8" style="color: white; padding: 0px 3px;" class="uk-icon"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" stroke-width="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span><span uk-icon="icon: star; ratio: .8" style="color: white; padding: 0px 3px;" class="uk-icon"><svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" stroke="#000" stroke-width="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span></p><span class="uk-text-small uk-text-lighter" style="position: relative; bottom: 1rem;">40 Votes</span></h2></div><div class="uk-width-auto"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="myChart_react" width="200" height="100" style="display: block;" class="chartjs-render-monitor"></canvas></div></div></div><div class="uk-width-expand"><a class="uk-button uk-button-small uk-button-primary uk-margin-bottom" style="color: rgb(4, 84, 139);">Ajouter votre avis</a><div class="uk-width uk-margin uk-margin-remove-top"><button class="uk-button  uk-button-small uk-border-pill" type="button" style="background-color: rgb(17, 74, 113);" aria-expanded="false"><span uk-icon="table" class="uk-margin-small-right uk-margin-small-left uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="3" width="18" height="1"></rect><rect x="1" y="7" width="18" height="1"></rect><rect x="1" y="11" width="18" height="1"></rect><rect x="1" y="15" width="18" height="1"></rect></svg></span><span class="uk-text-lighter uk-text-bold">Trier Par</span><span uk-icon="chevron-down" class="uk-margin-medium-left uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline></svg></span></button><div uk-dropdown="mode: click" class="uk-border-rounded uk-text-lighter uk-text-bold uk-dropdown" style="background-color: rgb(1, 15, 25);"><ul class="uk-nav uk-dropdown-nav "><li><a class="uk-text-lighter">Plus récent</a></li><li><a>Top commentaire</a></li></ul></div></div><div data-id="6202d3edcdb1a4662298ddfe" class="uk-grid uk-grid-small uk-margin-bottom uk-position-relative disable-text reviewItem"><div class="uk-width-auto" style="max-width: 100px;"><img class="uk-border-circle userPhoto" src="https://pictures.artify.tn/app/defaultUser.png?width=40"><div class="uk-hidden uk-position-cover uk-position-cover loading" style="z-index: 100;"><div class="uk-position-center"><div uk-spinner="ratio: 2" class="uk-icon uk-spinner"><svg width="60" height="60" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14" style="stroke-width: 0.5px;"></circle></svg></div></div></div></div><div class="uk-width-expand"><span class="uk-text-small uk-text-bold uk-text-truncate" style="color: white;">Miima sakly</span><span class="uk-text-small" style="color: rgb(6, 110, 181);"> •  il y a 3 mois</span><div style="cursor: default;"><p class="description uk-margin-remove-bottom uk-text-light">Pas Mal !  5/10</p><div class="uk-margin-small-top uk-text-meta"><a data-type="up" class="uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-up uk-margin-small-right uk-margin-small-left"></i><span>0</span></a><a data-type="down" class="uk-margin-small-right uk-margin-small-left uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-down uk-margin-small-right uk-margin-small-left"></i><span>0</span></a></div><div></div><div></div></div></div></div><div data-id="61edfb702efa260fb71a97fc" class="uk-grid uk-grid-small uk-margin-bottom uk-position-relative disable-text reviewItem"><div class="uk-width-auto" style="max-width: 100px;"><img class="uk-border-circle userPhoto" src="https://pictures.artify.tn/app/defaultUser.png?width=40"><div class="uk-hidden uk-position-cover uk-position-cover loading" style="z-index: 100;"><div class="uk-position-center"><div uk-spinner="ratio: 2" class="uk-icon uk-spinner"><svg width="60" height="60" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14" style="stroke-width: 0.5px;"></circle></svg></div></div></div></div><div class="uk-width-expand"><span class="uk-text-small uk-text-bold uk-text-truncate" style="color: white;">Nada Tayechi</span><span class="uk-text-small" style="color: rgb(6, 110, 181);"> •  il y a 3 mois</span><div style="cursor: default;"><p class="description uk-margin-remove-bottom uk-text-light">Franchement, masset barcha :/</p><div class="uk-margin-small-top uk-text-meta"><a data-type="up" class="uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-up uk-margin-small-right uk-margin-small-left"></i><span>1</span></a><a data-type="down" class="uk-margin-small-right uk-margin-small-left uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-down uk-margin-small-right uk-margin-small-left"></i><span>0</span></a></div><div></div><div></div></div></div></div><div data-id="61ea200145ca0905ba669727" class="uk-grid uk-grid-small uk-margin-bottom uk-position-relative disable-text reviewItem"><div class="uk-width-auto" style="max-width: 100px;"><img class="uk-border-circle userPhoto" src="https://pictures.artify.tn/app/defaultUser.png?width=40"><div class="uk-hidden uk-position-cover uk-position-cover loading" style="z-index: 100;"><div class="uk-position-center"><div uk-spinner="ratio: 2" class="uk-icon uk-spinner"><svg width="60" height="60" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14" style="stroke-width: 0.5px;"></circle></svg></div></div></div></div><div class="uk-width-expand"><span class="uk-text-small uk-text-bold uk-text-truncate" style="color: white;">Ameur Hedi</span><span class="uk-text-small" style="color: rgb(6, 110, 181);"> •  il y a 3 mois</span><div style="cursor: default;"><p class="description uk-margin-remove-bottom uk-text-light">Maset barcha barcha </p><div class="uk-margin-small-top uk-text-meta"><a data-type="up" class="uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-up uk-margin-small-right uk-margin-small-left"></i><span>2</span></a><a data-type="down" class="uk-margin-small-right uk-margin-small-left uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-down uk-margin-small-right uk-margin-small-left"></i><span>0</span></a></div><div></div><div></div></div></div></div><div data-id="61e89c1e279cbf2ad42e998d" class="uk-grid uk-grid-small uk-margin-bottom uk-position-relative disable-text reviewItem"><div class="uk-width-auto" style="max-width: 100px;"><img class="uk-border-circle userPhoto" src="https://pictures.artify.tn/app/defaultUser.png?width=40"><div class="uk-hidden uk-position-cover uk-position-cover loading" style="z-index: 100;"><div class="uk-position-center"><div uk-spinner="ratio: 2" class="uk-icon uk-spinner"><svg width="60" height="60" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14" style="stroke-width: 0.5px;"></circle></svg></div></div></div></div><div class="uk-width-expand"><span class="uk-text-small uk-text-bold uk-text-truncate" style="color: white;">Houssem Bousaha</span><span class="uk-text-small" style="color: rgb(6, 110, 181);"> •  il y a 3 mois</span><div style="cursor: default;"><p class="description uk-margin-remove-bottom uk-text-light">Nsaw bech ykamlouh 🤣</p><div class="uk-margin-small-top uk-text-meta"><a data-type="up" class="uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-up uk-margin-small-right uk-margin-small-left"></i><span>3</span></a><a data-type="down" class="uk-margin-small-right uk-margin-small-left uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-down uk-margin-small-right uk-margin-small-left"></i><span>0</span></a></div><div></div><div></div></div></div></div><div data-id="61e88758c39ded733f3f502c" class="uk-grid uk-grid-small uk-margin-bottom uk-position-relative disable-text reviewItem"><div class="uk-width-auto" style="max-width: 100px;"><img class="uk-border-circle userPhoto" src="https://pictures.artify.tn/app/defaultUser.png?width=40"><div class="uk-hidden uk-position-cover uk-position-cover loading" style="z-index: 100;"><div class="uk-position-center"><div uk-spinner="ratio: 2" class="uk-icon uk-spinner"><svg width="60" height="60" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" cx="15" cy="15" r="14" style="stroke-width: 0.5px;"></circle></svg></div></div></div></div><div class="uk-width-expand"><span class="uk-text-small uk-text-bold uk-text-truncate" style="color: white;">affi marwen</span><span class="uk-text-small" style="color: rgb(6, 110, 181);"> •  il y a 3 mois</span><div style="cursor: default;"><p class="description uk-margin-remove-bottom uk-text-light">كيف ما  تعودنا في الافلام التونسية
+الدخلة باهية و بعد يبدا بمساط مالدقيقة الثانية</p><div class="uk-margin-small-top uk-text-meta"><a data-type="up" class="uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-up uk-margin-small-right uk-margin-small-left"></i><span>2</span></a><a data-type="down" class="uk-margin-small-right uk-margin-small-left uk-padding-small voteInactif" style="padding-left: 0px; padding-right: 0px;"><i class="fas fa-thumbs-down uk-margin-small-right uk-margin-small-left"></i><span>0</span></a></div><div></div><div></div></div></div></div><div class="uk-width-1-1 uk-text-center uk-margin-medium-top"><a id="seeMoreReviewsBtn" class="uk-toggle uk-button uk-button-primary" style="color: rgb(4, 84, 139);">Voir plus</a></div></div><div id="modal-overflow" data-uk-modal="true" class="uk-modal"><div class="uk-modal-dialog modalBackground"><button class="uk-modal-close uk-padding-small uk-position-top-right uk-icon uk-close" type="button" data-uk-close="true"><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button><div class="uk-modal-header modalBackground" style="border-color: rgb(7, 41, 68);"><h2 class="uk-modal-title" style="color: white;">Commentaires</h2></div><div class="uk-modal-body uk-overflow-auto" data-uk-overflow-auto="true" style="min-height: 150px;"><div id="modal-filter"></div></div></div></div></div></div>
+			</div>
+    </div>
+   
+  </div>
+
+ 
+</div>
+
+
+<ng-template #preview>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <!-- 16:9 aspect ratio -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item"  [src]="getPreviewUrl()" allowscriptaccess="always"></iframe>
+    </div>
+  </div>
+</ng-template>

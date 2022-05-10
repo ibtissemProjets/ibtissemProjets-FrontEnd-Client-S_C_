@@ -1,0 +1,202 @@
+<section class="bg-home d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 col-md-6" style="margin-left: 28%;margin-top: 5%;">
+
+        <div class="modal-title">
+          <div class="mt-2">
+            <img style="  vertical-align: middle;
+                border-style: none;
+                border-radius: 80%;
+                width: 100px;
+                margin-top: -14px;
+    margin-left: 37%;" src="assets/images/user/finalLOGO.png" alt="">
+            <h3 style="color: orange;"><b>Bienvenue chez SoireeCinema</b></h3>
+            <h5><span style="color: orange;"><i>La création de votre compte ne prend que quelques secondes</i></span>
+            </h5>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <!----nom +prenom----->
+        <form [formGroup]="registerCliForm" (ngSubmit)="onSubmitClient()">
+
+          <div class="row">
+            <!--nom-->
+            <div class="col-md-6">
+              <div id="exampleInputGroup2" role="group" class="form-group">
+                <input type="text" placeholder="Nom..." formControlName="lastname" class="form-control" />
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.lastname">
+                    <div class="error-message" *ngIf=" registerCliForm.get('lastname').hasError(error.type) &&
+                     (registerCliForm.get('lastname').dirty || registerCliForm.get('lastname').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+            <!--prenom-->
+            <div class="col-md-6">
+              <div id="exampleInputGroup2" role="group" class="form-group">
+                <input type="text" placeholder="Prénom..." formControlName="firstname" class="form-control" />
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.firstname">
+                    <div class="error-message" *ngIf=" registerCliForm.get('firstname').hasError(error.type) &&
+                     ( registerCliForm.get('firstname').dirty ||  registerCliForm.get('firstname').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+            </div>
+
+          <!----ville+pays----->
+          <div class="row">
+            <!--pays-->
+            <div class="col-md-6">
+              <div id="exampleInputGroup2" role="group" class="form-group">
+                <input type="text" placeholder="Pays..." formControlName="pays" class="form-control" />
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.pays">
+                    <div class="error-message" *ngIf=" registerCliForm.get('pays').hasError(error.type) &&
+                     ( registerCliForm.get('pays').dirty ||  registerCliForm.get('pays').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+            <!--ville-->
+            <div class="col-md-6">
+              <div id="exampleInputGroup2" role="group" class="form-group">
+                <input type="text" placeholder="Ville..." formControlName="ville" class="form-control" />
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.ville">
+                    <div class="error-message" *ngIf=" registerCliForm.get('ville').hasError(error.type) &&
+                     ( registerCliForm.get('ville').dirty ||  registerCliForm.get('ville').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--date de naissance-->
+          <div id="exampleInputGroup1" role="group" aria-describedby="exampleInputGroup1__BV_description_"
+            class="form-group">
+            <div>
+              <label style="color: orange;"> Date Naissance</label>
+              <input id="exampleInput1" type="date" formControlName="dateNaiss" required="required" class="form-control"
+                aria-describedby="exampleInputGroup1__BV_description_" />
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.dateNaiss">
+                    <div class="error-message" *ngIf=" registerCliForm.get('dateNaiss').hasError(error.type) &&
+                     ( registerCliForm.get('dateNaiss').dirty ||  registerCliForm.get('dateNaiss').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+            </div>
+          </div>
+
+          <!--email-->
+          <div id="exampleInputGroup1" role="group" aria-describedby="exampleInputGroup1__BV_description_"
+            class="form-group">
+            <div>
+              <input id="exampleInput1" type="email" placeholder="email..." required="required" class="form-control"
+                aria-describedby="exampleInputGroup1__BV_description_" formControlName="email"/>
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.email">
+                    <div class="error-message" *ngIf=" registerCliForm.get('email').hasError(error.type) &&
+                     ( registerCliForm.get('email').dirty ||  registerCliForm.get('email').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+            </div>
+          </div>
+
+          <!--username-->
+          <div id="exampleInputGroup1" role="group" aria-describedby="exampleInputGroup1__BV_description_"
+            class="form-group">
+            <div>
+              <input id="exampleInput1" type="text" placeholder="Nom utilisateur..." required="required"
+                class="form-control" aria-describedby="exampleInputGroup1__BV_description_" formControlName="username"/>
+                <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.username">
+                    <div class="error-message" *ngIf=" registerCliForm.get('username').hasError(error.type) &&
+                     ( registerCliForm.get('username').dirty ||  registerCliForm.get('username').touched)">
+                      {{ error.message }}
+                    </div>
+                  </ng-container>
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!--password-->
+            <div class="col-md-6">
+              <div class="form-group" id="exampleInputGroup2" role="group">
+                <input class="form-control" formControlName="password" type="password" placeholder="Password..." />
+              </div>
+              <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.password">
+                  <div class="error-message" *ngIf="
+                        registerCliForm.get('password').hasError(error.type) &&
+                        (registerCliForm.get('password').dirty ||
+                        registerCliForm.get('password').touched) ">
+                    {{ error.message }}
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+
+           <!--password2-->
+            <div class="col-md-6">
+              <div class="form-group" id="exampleInputGroup2" role="group">
+                <input class="form-control" formControlName="confirmPassword" type="password" placeholder="confirmer Password..."/>
+             </div>
+             <div class="error-messages">
+               <ng-container *ngFor="let error of error_messages.confirmPassword">
+                 <div class="error-message" *ngIf="
+                         registerCliForm.get('confirmPassword').hasError(error.type) &&
+                         (registerCliForm.get('confirmPassword').dirty ||
+                         registerCliForm.get('confirmPassword').touched)
+                         ">
+                   {{ error.message }}
+                 </div>
+               </ng-container>
+             </div>
+
+            </div>
+
+            <!---->
+          </div>
+
+          <div class="divider"></div>
+         
+
+            <div class="modal-footer d-block text-center">
+              
+              <button  class="btn btn-warning mr-1 cc" [disabled]="!registerCliForm.valid" class="uk-button uk-button-primary uk-button-small" 
+              style="white-space: nowrap;"> <b>S'inscrire</b>
+              </button> 
+
+              <button class="btn btn-danger mr-1" style="margin-left: 1%;"
+                class="uk-button uk-button-secondary uk-button-small" type="reset" (click)="onReset()"> Annuler </button>
+            </div>
+
+          
+        </form>
+      </div>
+    </div>
+    <!--end col-->
+  </div>
+  <!--end row-->
+
+  <!--end container-->
+</section>
