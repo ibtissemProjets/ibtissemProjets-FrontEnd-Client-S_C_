@@ -10,7 +10,7 @@
 <div class="main-container">
 
 <div class="genres-list">
-  <span class="title">Catégories</span>
+  <span class="title">Catégories Films</span>
   <hr>
   <ul class="genre-list-items">
     <li *ngFor="let genre of genres | enumToArray">
@@ -51,164 +51,370 @@
     </div>
   </div>
   <div   *ngIf="!show">
-    
-    <div class="uk-container uk-container-large uk-light uk-margin-large-bottom">
 
+    <!--Nouveautés-->
+    <div class="uk-container uk-container-large uk-light uk-margin-large-bottom">
+    
     
       <div class="uk-margin-medium-top uk-margin-medium-bottom">
-  
+    
         <div class="uk-flex uk-flex-between uk-flex-bottom uk-margin-small-bottom">
           <h3 class="uk-margin-remove">
             Nouveautés sur SoiréeCinéma
           </h3>
           <a href="/film" class="uk-link-text" style="white-space: nowrap;">
-              <span uk-icon="icon: chevron-right; ratio: 1.5" class="uk-icon">
-                Voir plus
-              <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16"></polyline></svg></span>
+            <span uk-icon="icon: chevron-right; ratio: 1.5" class="uk-icon">
+              Voir plus
+              <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16"></polyline>
+              </svg></span>
           </a>
         </div>
-         
+    
         <!-- MEDIA LIST -->
-        <div class="uk-visible-toggle uk-light uk-position-relative uk-slider uk-slider-container" style="min-height: 220px;" tabindex="-1" uk-slider="">
-    <ul class="uk-slider-items" style="transform: translate3d(0px, 0px, 0px);">
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/dfrriohtvgwazvzzvds3.jpg?width=300" alt="Tunisie du Rire" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+        <div class="uk-visible-toggle uk-light uk-position-relative uk-slider uk-slider-container"
+          style="min-height: 220px;" tabindex="-1" uk-slider="">
+          <ul class="uk-slider-items" style="transform: translate3d(0px, 0px, 0px);">
+
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <!--<img src="https://pictures.artify.tn/media/dfrriohtvgwazvzzvds3.jpg?width=300" alt="Tunisie du Rire" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+                --><img src="assets/moviesJPEG/romance/50nuances.jpg?width=300" alt="50nuances" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Série</span> -->
+                  <h5 class="uk-margin-remove line-clamp">50 nuances</h5>
+                  <span>2017</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/622b7d39a57338516276174f/tunisie-du-rire"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/622b7d39a57338516276174f/tunisie-du-rire"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/romance/365.jpg?width=300" alt="365days" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">365 days</h5>
+                  <span>2020</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/cartoon/ballerina.jpg?width=300" alt="Ballerina" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">Ballerina</h5>
+                  <span>2016</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/5da487cc4250f04aa60095f0/noura-rve"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/5da487cc4250f04aa60095f0/noura-rve"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/aventure/adv1.jpg?width=300" alt="Blue Lagoon" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">Blue Lagoon</h5>
+                  <span>2012</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+    
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/action/american-gangster.jpg?width=300" alt="American Gangster" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">American Gangster</h5>
+                  <span>2007</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/6234eaaa38807237c1dae2c0/hades"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/6234eaaa38807237c1dae2c0/hades"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+   
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/fiction/fic1.jpg?width=300" alt="The Plateform" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">The Plateform</h5>
+                  <span>2019</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/6198008bc5db040654d275d8/rebelote"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/6198008bc5db040654d275d8/rebelote"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+              uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+              <img src="assets/moviesJPEG/horror/nun.jpg?width=300" alt="NUN" loading="lazy"
+                class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+              <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+                <div class="uk-overlay uk-position-top noselect">
+                  <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Court Métrage</span> -->
+                  <h5 class="uk-margin-remove line-clamp">NUN</h5>
+                  <span>2021</span>
+                </div>
+                <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                  <a href="/media/6127f5afd549a03d4d340266/barisa"
+                    class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                  <a href="/media/6127f5afd549a03d4d340266/barisa"
+                    class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                </div>
+              </div>
+            </li>
+    
+    
+          </ul>
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav"
+            href="#" uk-slidenav-previous="" uk-slider-item="previous" dir="ltr"><svg width="14" height="24"
+              viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+              <polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline>
+            </svg></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav"
+            href="#" uk-slidenav-next="" uk-slider-item="next" dir="ltr"><svg width="14" height="24" viewBox="0 0 14 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline>
+            </svg></a>
+        </div>
+    
+    
+      </div>
+    
+    </div>
+    <!--Recommendés-->
+    <div class="uk-container  uk-light uk-margin-large-bottom">
+    
+      <div class="uk-flex uk-flex-between uk-flex-bottom uk-margin-small-bottom">
+        <h3 class="uk-margin-remove">
+          Recommandés par SoiréeCinéma
+        </h3>
+        <a href="/film" class="uk-link-text" style="white-space: nowrap;">
+          <span uk-icon="icon: chevron-right; ratio: 1.5" class="uk-icon">
+            Voir plus
+            <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16"></polyline>
+            </svg></span>
+        </a>
+      </div>
+    
+      <!-- MEDIA LIST -->
+      <div class="uk-visible-toggle uk-light uk-position-relative uk-slider uk-slider-container" style="min-height: 220px;"
+        tabindex="-1" uk-slider="">
+        <ul class="uk-slider-items" style="transform: translate3d(0px, 0px, 0px);">
+
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <!--<img src="https://pictures.artify.tn/media/dfrriohtvgwazvzzvds3.jpg?width=300" alt="Tunisie du Rire" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+                --><img src="assets/moviesJPEG/romance/50nuances.jpg?width=300" alt="50nuances" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Série</span> -->
-                <h5 class="uk-margin-remove line-clamp">Tunisie du Rire</h5>
-                <span>2022</span>
+                <h5 class="uk-margin-remove line-clamp">50 nuances</h5>
+                <span>2017</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/622b7d39a57338516276174f/tunisie-du-rire" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/622b7d39a57338516276174f/tunisie-du-rire" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                <a href="/media/622b7d39a57338516276174f/tunisie-du-rire"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/622b7d39a57338516276174f/tunisie-du-rire"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
               </div>
             </div>
           </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/xlyfdye2imqvobqsuxbo.jpg?width=300" alt="Porto Farina" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/romance/365.jpg?width=300" alt="365days" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Porto Farina</h5>
-                <span>2019</span>
-              </div>
-              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
-              </div>
-            </div>
-          </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/jtwey3n1flw8efinl0zo.jpg?width=300" alt="Noura rêve" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
-            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
-              <div class="uk-overlay uk-position-top noselect">
-                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Noura rêve</h5>
-                <span>2019</span>
-              </div>
-              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/5da487cc4250f04aa60095f0/noura-rve" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/5da487cc4250f04aa60095f0/noura-rve" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
-              </div>
-            </div>
-          </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/yosu8cmb7ufutgavj0tk.jpg?width=300" alt="Al Batros - El Gharnouk" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
-            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
-              <div class="uk-overlay uk-position-top noselect">
-                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Al Batros - El Gharnouk</h5>
-                <span>2021</span>
-              </div>
-              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
-              </div>
-            </div>
-          </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/vv9meyxnhibx93lxypbj.png?width=300" alt="Hades" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
-            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
-              <div class="uk-overlay uk-position-top noselect">
-                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Hades</h5>
-                <span>2021</span>
-              </div>
-              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/6234eaaa38807237c1dae2c0/hades" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/6234eaaa38807237c1dae2c0/hades" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
-              </div>
-            </div>
-          </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/ezxhsrwyexyglmoitxlh.jpg?width=300" alt="Rebelote" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
-            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
-              <div class="uk-overlay uk-position-top noselect">
-                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Rebelote</h5>
+                <h5 class="uk-margin-remove line-clamp">365 days</h5>
                 <span>2020</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/6198008bc5db040654d275d8/rebelote" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/6198008bc5db040654d275d8/rebelote" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
               </div>
             </div>
           </li>
-        
-      
-        
-          
-          <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/pk9zzstf3zx9f02n06zn.jpg?width=300" alt="BARISA" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/cartoon/ballerina.jpg?width=300" alt="Ballerina" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+              <div class="uk-overlay uk-position-top noselect">
+                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                <h5 class="uk-margin-remove line-clamp">Ballerina</h5>
+                <span>2016</span>
+              </div>
+              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                <a href="/media/5da487cc4250f04aa60095f0/noura-rve"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/5da487cc4250f04aa60095f0/noura-rve"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/aventure/adv1.jpg?width=300" alt="Blue Lagoon" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+              <div class="uk-overlay uk-position-top noselect">
+                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                <h5 class="uk-margin-remove line-clamp">Blue Lagoon</h5>
+                <span>2012</span>
+              </div>
+              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/action/american-gangster.jpg?width=300" alt="American Gangster" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+              <div class="uk-overlay uk-position-top noselect">
+                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                <h5 class="uk-margin-remove line-clamp">American Gangster</h5>
+                <span>2007</span>
+              </div>
+              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                <a href="/media/6234eaaa38807237c1dae2c0/hades"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/6234eaaa38807237c1dae2c0/hades"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+              </div>
+            </div>
+          </li>
+    
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/fiction/fic1.jpg?width=300" alt="The Plateform" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
+              <div class="uk-overlay uk-position-top noselect">
+                <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
+                <h5 class="uk-margin-remove line-clamp">The Plateform</h5>
+                <span>2019</span>
+              </div>
+              <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
+                <a href="/media/6198008bc5db040654d275d8/rebelote"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/6198008bc5db040654d275d8/rebelote"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+              </div>
+            </div>
+          </li>
+    
+          <li
+            class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade"
+            uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
+            <img src="assets/moviesJPEG/horror/nun.jpg?width=300" alt="NUN" loading="lazy"
+              class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Court Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">BARISA</h5>
+                <h5 class="uk-margin-remove line-clamp">NUN</h5>
                 <span>2021</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
-                <a href="/media/6127f5afd549a03d4d340266/barisa" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
-                <a href="/media/6127f5afd549a03d4d340266/barisa" class="uk-button uk-button-primary uk-visible@s">Regarder</a>
+                <a href="/media/6127f5afd549a03d4d340266/barisa"
+                  class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
+                <a href="/media/6127f5afd549a03d4d340266/barisa"
+                  class="uk-button uk-button-primary uk-visible@s">Regarder</a>
               </div>
             </div>
           </li>
-        
-      
-    </ul>
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="#" uk-slidenav-previous="" uk-slider-item="previous" dir="ltr"><svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="#" uk-slidenav-next="" uk-slider-item="next" dir="ltr"><svg width="14" height="24" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
-  </div>
-        
-  
+    
+    
+        </ul>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav"
+          href="#" uk-slidenav-previous="" uk-slider-item="previous" dir="ltr"><svg width="14" height="24"
+            viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline>
+          </svg></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="#"
+          uk-slidenav-next="" uk-slider-item="next" dir="ltr"><svg width="14" height="24" viewBox="0 0 14 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline>
+          </svg></a>
       </div>
-       
+    
     </div>
-     
-    <div class="uk-container uk-container-large uk-light uk-margin-large-bottom">
+
+    <!--Populaires--> 
+     <div class="uk-container uk-container-large uk-light uk-margin-large-bottom">
 
     
       <div class="uk-margin-medium-top uk-margin-medium-bottom">
@@ -227,16 +433,14 @@
         <!-- MEDIA LIST -->
         <div class="uk-visible-toggle uk-light uk-position-relative uk-slider uk-slider-container" style="min-height: 220px;" tabindex="-1" uk-slider="">
     <ul class="uk-slider-items" style="transform: translate3d(0px, 0px, 0px);">
-      
-        
-          
+   
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/dfrriohtvgwazvzzvds3.jpg?width=300" alt="Tunisie du Rire" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/romance/mebefore.jpg?width=300" alt="Me Before you" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Série</span> -->
-                <h5 class="uk-margin-remove line-clamp">Tunisie du Rire</h5>
-                <span>2022</span>
+                <h5 class="uk-margin-remove line-clamp">Me Before you</h5>
+                <span>2016</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/622b7d39a57338516276174f/tunisie-du-rire" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -244,17 +448,14 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/xlyfdye2imqvobqsuxbo.jpg?width=300" alt="Porto Farina" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/romance/twilight.jpg?width=300" alt="Twilight" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Porto Farina</h5>
-                <span>2019</span>
+                <h5 class="uk-margin-remove line-clamp">Twilight</h5>
+                <span>2012</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/5d651c6f73b8df0c6b5c3ac7/porto-farina" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -262,17 +463,14 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/jtwey3n1flw8efinl0zo.jpg?width=300" alt="Noura rêve" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/cartoon/coco.jpg?width=300" alt="COCO" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Noura rêve</h5>
-                <span>2019</span>
+                <h5 class="uk-margin-remove line-clamp">COCO</h5>
+                <span>2017</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/5da487cc4250f04aa60095f0/noura-rve" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -280,17 +478,14 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-active uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/yosu8cmb7ufutgavj0tk.jpg?width=300" alt="Al Batros - El Gharnouk" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/action/tracers.jpg?width=300" alt="Tracers" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Al Batros - El Gharnouk</h5>
-                <span>2021</span>
+                <h5 class="uk-margin-remove line-clamp">Tracers</h5>
+                <span>2015</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/61f1aab6fca7ef4da852bf18/al-batros-el-gharnouk" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -298,17 +493,14 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/vv9meyxnhibx93lxypbj.png?width=300" alt="Hades" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/fiction/fic2.jpg?width=300" alt="GORA" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Hades</h5>
-                <span>2021</span>
+                <h5 class="uk-margin-remove line-clamp">GORA</h5>
+                <span>2004</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/6234eaaa38807237c1dae2c0/hades" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -316,17 +508,14 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+  
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/ezxhsrwyexyglmoitxlh.jpg?width=300" alt="Rebelote" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/history/henri.jpg?width=300" alt="Henri" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Long Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">Rebelote</h5>
-                <span>2020</span>
+                <h5 class="uk-margin-remove line-clamp">Henri</h5>
+                <span>2010</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">
                 <a href="/media/6198008bc5db040654d275d8/rebelote" class="uk-button uk-button-primary uk-button-small uk-hidden@s">Regarder</a>
@@ -334,16 +523,13 @@
               </div>
             </div>
           </li>
-        
-      
-        
-          
+
           <li class="uk-transition-toggle uk-overflow-hidden homeList_item placeholder uk-scrollspy-inview uk-animation-fade" uk-scrollspy="cls: uk-animation-fade ; repeat: false" tabindex="-1" style="">
-            <img src="https://pictures.artify.tn/media/pk9zzstf3zx9f02n06zn.jpg?width=300" alt="BARISA" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
+            <img src="assets/moviesJPEG/horror/dolly.jpg?width=300" alt="Dolly" loading="lazy" class="uk-transition-scale-up uk-transition-opaque contentPlaceholder_animation">
             <div class="uk-overlay uk-position-cover uk-transition-fade" style="background: rgba(4, 29, 63, 0.87);">
               <div class="uk-overlay uk-position-top noselect">
                 <!-- <span class="uk-badge uk-badge-blue Artify-badge uk-margin-small-bottom">Court Métrage</span> -->
-                <h5 class="uk-margin-remove line-clamp">BARISA</h5>
+                <h5 class="uk-margin-remove line-clamp">Dolly</h5>
                 <span>2021</span>
               </div>
               <div class="uk-overlay uk-position-bottom-center" style="z-index:999999">

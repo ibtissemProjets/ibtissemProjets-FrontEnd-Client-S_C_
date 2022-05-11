@@ -12,8 +12,9 @@ export class MoviesSliderComponent implements OnInit {
   movies: Movie[];
   images = [
     {path: 'assets/movies/we-are-the-millers-cover.jpg'},
-    {path: 'assets/movies/american-gangster-cover.jpg'},
-    {path: 'assets/movies/jurassic-world.jpg'},
+    {path: 'assets/moviesJPEG/horror/nunC.jpg'},
+    {path: 'assets/moviesJPEG/fiction/fic3C.jpg'},
+    {path: 'assets/moviesJPEG/cartoon/cocoC.jpg'},
     {path: 'assets/movies/tracers-cover.jpg'},
   ]
 

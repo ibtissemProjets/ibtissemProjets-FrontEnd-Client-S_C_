@@ -21,11 +21,6 @@
 			</div>
 	</div>
 </div>
-	
-	
-
-	
-
 
 	<div dir="ltr">
 		<nav class="uk-navbar uk-navbar-container Artify-navBar">	
@@ -38,12 +33,12 @@
 
 
 				<!-- LINKS -->
-				<a id="navbar-home-link" href="/" class="uk-navbar-toggle uk-visible@s">
+				<a id="navbar-home-link" routerLink="/" class="uk-navbar-toggle uk-visible@s">
 					<button class="uk-button uk-button-text uk-text-capitalize uk-text-meta">
 						Accueil
 					</button>
 				</a>
-				<a id="navbar-films-link" routerLink="/" class="uk-navbar-toggle uk-visible@l">
+				<a id="navbar-films-link" routerLink="/all" class="uk-navbar-toggle uk-visible@l">
 					<button class="uk-button uk-button-text uk-text-capitalize uk-text-meta">
 						Films
 					</button>
@@ -53,9 +48,6 @@
 						Contactez-nous
 					</button>
 				</a>
-			 
-
-				
 			</div>
 
 			<div class="uk-navbar-right">
@@ -72,9 +64,7 @@
 							<div uk-dropdown="mode: click" class="uk-dropdown uk-light uk-background-secondary">
 								<ul class="uk-nav uk-dropdown-nav">
 									
-										 
-									
-										 
+
 											<li>
 												<a href="https://artify.tn/fr/" class="uk-text-primary">
 													Français
@@ -110,12 +100,7 @@
 							</ul>
 						</div>
 					</li> -->
-					
-			
 
-					
-
-				 
 						<li class="uk-navbar-item" *ngIf="!connected">
 							<div>
 								<a routerLink="/register" class="uk-button uk-button-primary uk-button-small" style="white-space: nowrap;">
@@ -124,16 +109,6 @@
 							</div>
 						</li>
 					
-
-					
-				
-					
-					
-						<!-- <li class="uk-navbar-item">
-							<a class="uk-button uk-padding-remove uk-hidden@s" href="/login">
-								<span uk-icon="icon: sign-in"></span>
-							</a>
-						</li> -->
 						
 						<li class="uk-navbar-item" *ngIf="!connected">
 							<a routerLink="/login" class="uk-button uk-padding-remove" style="text-transform: initial !important;white-space: nowrap;">
@@ -146,15 +121,9 @@
 						<li class="uk-navbar-item"  *ngIf="connected">
 							<div>
 								<a  class="uk-button uk-button-primary uk-button-small" style="white-space: nowrap;">
-                         {{Username}}								</a>
+                                 {{Username}}	</a>
 							</div>
 						</li>
-					
-
-					
-				 
-					
-				 
 					
 				</ul>
 				
