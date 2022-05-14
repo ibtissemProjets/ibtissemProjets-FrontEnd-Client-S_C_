@@ -1,7 +1,9 @@
-<carousel
-[images]="images"
-[cellsToShow]="1"
-[loop]="true"
-[autoplay]="true"
-[autoplayInterval]="4000"
-></carousel>
+<div class="container">
+	<div class="sliders">
+		<ng-container *ngFor="let img of images; let i = index">
+			<div class="slider" *ngIf="current == i" @fade>
+				<img class="img" src="data:image/jpeg;base64,{{img.url}}">
+			</div>
+		</ng-container>
+	</div>
+</div>
